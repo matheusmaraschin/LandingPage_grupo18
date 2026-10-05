@@ -3,7 +3,8 @@
   --primary:#4331a8; --accent:#6c4fe0; --soft:#e6e1f7; --line:#e3def2;
   --navy:#181b42; --lav:#dcdcf8;
 }
-*{box-sizing:border-box;margin:0}
+*{
+  box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth;scroll-padding-top:76px}
 body{background:var(--bg);color:var(--ink);font:400 1rem/1.65 "Inter",system-ui,sans-serif}
 h1,h2,h3{line-height:1.12;letter-spacing:-.02em;color:var(--ink)}
