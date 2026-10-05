@@ -8,10 +8,10 @@ nav.addEventListener('click', e => {
   if (e.target.tagName === 'A') { nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }
 });
 
-// Telas do MVP por perfil
+
 const perfis = {
   'Cliente': [
-    { img: 'cliente.png', nome: 'Minhas demandas', texto: 'O cliente acompanha o status, a prioridade e o responsável por cada solicitação em um só lugar.' },
+    { img: 'imagem/cliente.png', nome: 'Minhas demandas', texto: 'O cliente acompanha o status, a prioridade e o responsável por cada solicitação em um só lugar.' },
     { img: 'empresas.png', nome: 'Empresas', texto: 'Encontra a empresa por nome ou cidade e abre uma demanda para ela.' }
   ],
   'Suporte': [
@@ -22,7 +22,7 @@ const perfis = {
     { img: 'dev.png', nome: 'Central de demandas', texto: 'O desenvolvedor acompanha o contexto, os responsáveis e a evolução de cada solicitação.' }
   ],
   'Administrador': [
-    { img: 'catalogo.png', nome: 'Problemas e formulários', texto: 'Catálogo da empresa: cada problema tem o seu formulário, com as perguntas publicadas.' },
+    { img: 'imagemcatalogo.png', nome: 'Problemas e formulários', texto: 'Catálogo da empresa: cada problema tem o seu formulário, com as perguntas publicadas.' },
     { img: 'criar-problema.png', nome: 'Novo problema', texto: 'Define o problema, as orientações para a IA e as perguntas que o cliente deve preencher.' },
     { img: 'funcionarios.png', nome: 'Funcionários', texto: 'Cadastra integrantes e altera os cargos quando necessário.' },
     { img: 'empresa.png', nome: 'Minha empresa', texto: 'Configura as informações que aparecem para os clientes, como contato e horário de atendimento.' }
