@@ -8,24 +8,24 @@ nav.addEventListener('click', e => {
   if (e.target.tagName === 'A') { nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }
 });
 
-
+// Telas do MVP por perfil
 const perfis = {
   'Cliente': [
-    { img: 'imagem/cliente.png', nome: 'Minhas demandas', texto: 'O cliente acompanha o status, a prioridade e o responsável por cada solicitação em um só lugar.' },
-    { img: 'empresas.png', nome: 'Empresas', texto: 'Encontra a empresa por nome ou cidade e abre uma demanda para ela.' }
+    { img: 'cliente-demandas.png', nome: 'Minhas demandas', texto: 'O cliente acompanha o status, a prioridade e o responsável por cada solicitação em um só lugar.' },
+    { img: 'cliente-empresas.png', nome: 'Empresas', texto: 'Encontra a empresa por nome ou cidade e abre uma demanda para ela.' }
   ],
   'Suporte': [
-    { img: 'suporte.png', nome: 'Central de demandas', texto: 'A equipe vê as demandas recebidas, filtra por status e inicia o atendimento.' },
-    { img: 'checklist.png', nome: 'Checklist do relatório', texto: 'O suporte completa o contexto técnico, anexa arquivos, define a prioridade e envia à IA para gerar o relatório, que é revisado antes de ir ao dev.' }
+    { img: 'suporte-demandas.png', nome: 'Central de demandas', texto: 'A equipe vê as demandas recebidas, filtra por status e inicia o atendimento.' },
+    { img: 'suporte-formulario.png', nome: 'Checklist do relatório', texto: 'O suporte completa o contexto técnico, anexa arquivos, define a prioridade e envia à IA para gerar o relatório, que é revisado antes de ir ao dev.' }
   ],
   'Desenvolvedor': [
-    { img: 'dev.png', nome: 'Central de demandas', texto: 'O desenvolvedor acompanha o contexto, os responsáveis e a evolução de cada solicitação.' }
+    { img: 'dev-demandas.png', nome: 'Central de demandas', texto: 'O desenvolvedor acompanha o contexto, os responsáveis e a evolução de cada solicitação.' }
   ],
   'Administrador': [
-    { img: 'imagemcatalogo.png', nome: 'Problemas e formulários', texto: 'Catálogo da empresa: cada problema tem o seu formulário, com as perguntas publicadas.' },
-    { img: 'criar-problema.png', nome: 'Novo problema', texto: 'Define o problema, as orientações para a IA e as perguntas que o cliente deve preencher.' },
-    { img: 'funcionarios.png', nome: 'Funcionários', texto: 'Cadastra integrantes e altera os cargos quando necessário.' },
-    { img: 'empresa.png', nome: 'Minha empresa', texto: 'Configura as informações que aparecem para os clientes, como contato e horário de atendimento.' }
+    { img: 'adm-formularios.png', nome: 'Problemas e formulários', texto: 'Catálogo da empresa: cada problema tem o seu formulário, com as perguntas publicadas.' },
+    { img: 'adm-criar-forms.png', nome: 'Novo problema', texto: 'Define o problema, as orientações para a IA e as perguntas que o cliente deve preencher.' },
+    { img: 'adm-funcionarios.png', nome: 'Funcionários', texto: 'Cadastra integrantes e altera os cargos quando necessário.' },
+    { img: 'adm-empresa.png', nome: 'Minha empresa', texto: 'Configura as informações que aparecem para os clientes, como contato e horário de atendimento.' }
   ]
 };
 const tabs = document.getElementById('tabs');
@@ -36,7 +36,7 @@ const capText = document.getElementById('cap-text');
 
 function showScreen(perfil, i) {
   const t = perfis[perfil][i];
-  mainImg.src = 'images/' + t.img;
+  mainImg.src = 'imagens/' + t.img;
   mainImg.alt = `${perfil}: tela ${t.nome}`;
   capTitle.textContent = t.nome;
   capText.textContent = t.texto;
@@ -48,7 +48,7 @@ function showPerfil(perfil) {
   perfis[perfil].forEach((t, i) => {
     const b = document.createElement('button');
     b.type = 'button';
-    b.innerHTML = `<img src="images/${t.img}" alt=""><span>${t.nome}</span>`;
+    b.innerHTML = `<img src="imagens/${t.img}" alt=""><span>${t.nome}</span>`;
     b.addEventListener('click', () => showScreen(perfil, i));
     thumbs.appendChild(b);
   });
